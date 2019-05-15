@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body id="body-element">
+    <p> Testing </p>
+</body>
+<script>
+    let colors = ['#FF0000', '#0000FF'];
+let rand = Math.floor( Math.random() * 10);
+let background;
+
+if (rand < 7) { 
+    background = colors[0];
+} else {
+    background = colors[1];
+}
+
+if (this.localStorage["background-color"]) {
+    background = this.localStorage["background-color"];
+} else {
+    this.localStorage["background-color"] = background;
+}
+
+document.getElementById("body-element").style.backgroundColor = background;
+</script>
+</html>
