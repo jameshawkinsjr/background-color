@@ -12,21 +12,21 @@
 </body>
 <script>
     let colors = ['#FF0000', '#0000FF'];
-let rand = Math.floor( Math.random() * 10);
-let background;
+    let rand = Math.floor( Math.random() * 10);
+    let background;
 
-if (rand < 7) { 
-    background = colors[0];
-} else {
-    background = colors[1];
-}
+    if (rand < 7) { 
+        background = colors[0];
+    } else {
+        background = colors[1];
+    }
 
-if (this.localStorage["background-color"]) {
-    background = this.localStorage["background-color"];
-} else {
-    this.localStorage["background-color"] = background;
-}
+    if (this.localStorage["background-color"]) {
+        background = this.localStorage["background-color"];
+    } else {
+        this.localStorage["background-color"] = background;
+    }
 
-document.getElementById("body-element").style.backgroundColor = background;
+    document.getElementById("body-element").style.backgroundColor = background;
 </script>
 </html>
