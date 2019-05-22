@@ -1,32 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <title>Jasmine Spec Runner v2.5.2</title>
 
-<body id="body-element">
-    <p> Testing </p>
-</body>
-<script>
-    let colors = ['#FF0000', '#0000FF'];
-    let rand = Math.floor( Math.random() * 10);
-    let background;
+      <link
+         rel="shortcut icon"
+         type="image/png"
+         href="lib/jasmine-2.5.2/jasmine_favicon.png"
+      />
+      <link rel="stylesheet" href="lib/jasmine-2.5.2/jasmine.css" />
 
-    if (rand < 7) { 
-        background = colors[0];
-    } else {
-        background = colors[1];
-    }
+      <script src="lib/jasmine-2.5.2/jasmine.js"></script>
+      <script src="lib/jasmine-2.5.2/jasmine-html.js"></script>
+      <script src="lib/jasmine-2.5.2/boot.js"></script>
 
-    if (this.localStorage["background-color"]) {
-        background = this.localStorage["background-color"];
-    } else {
-        this.localStorage["background-color"] = background;
-    }
+      <!-- include source files here... -->
+      <script type="text/javascript" src="./background.js"></script>
 
-    document.getElementById("body-element").style.backgroundColor = background;
-</script>
+      <!-- include spec files here... -->
+      <script type="text/javascript" src="./spec.js"></script>
+   </head>
+
+   <body></body>
 </html>
