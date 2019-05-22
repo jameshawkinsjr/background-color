@@ -1,0 +1,13 @@
+{
+  "main": "SpecRunner.html",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "live-server": "^1.2.1"
+  },
+  "scripts": {
+    "initialize": "bundle install && npm install",
+    "test": "live-server"
+  }
+}
